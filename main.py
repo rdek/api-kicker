@@ -6,19 +6,28 @@ import json
 import argparse
 
 # COMMAND LINE ARGUMENTS PARSER
-parser = argparse.ArgumentParser()
-parser.add_argument("-u", "--url", help="Target URL to check")
-parser.add_argument("-f", "--file", help="File with targets urls to check")
-parser.add_argument("-h", "--header", help="Header parameter, one per flag. 
-        E.g.: -h "Host: example.com" -h "Content-Type: application/json"")
-parser.add_argument("-H", "--headers", help="File with request headers, format - one under another")
+## arguments help content formatter
+class smartFormatter(argparse.HelpFormatter):
+    def _split_lines(self, text, width):
+        if text.startswith('R|'):
+            return text[2:].splitlines()
+        return argparse.HelpFormatter._split_lines(self, text, width)
+
+## proper arguments definitions
+parser = argparse.ArgumentParser(description="TESTOWY DESCRIPTION", formatter_class=smartFormatter)
+parser.add_argument("-u", "--url", type=str, help="Target URL to check")
+parser.add_argument("-f", "--file", type=str, help="File with targets urls to check")
+parser.add_argument("-H", "--header", type=str, help='R|Header parameter, one per flag, e.g.:\n'
+    '     /> python3 api-kicker.py -h "Host: example.com" -h "Content-Type: application/json"')
+parser.add_argument("--headers", type=str, help="File with request headers, format - one under another")
 
 
-args = parser.parse_args()
+arg = parser.parse_args()
 
 class httpClient:
     
-    def target(source)
+    def target(source):
+        pass
 pass
 url = 'https://www.g2a.com/new/api/products/search?phrase=nonono'
 
@@ -45,6 +54,4 @@ payloads = {
         'someData': 'someDataValue',
         'anotherData': 'anotherDataValue'
         }
-
-l
 
