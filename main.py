@@ -31,7 +31,7 @@ class httpClient:
 pass
 url = 'https://www.site.com/api/products/search?phrase=nonono'
 
-# host = 'www.g2a.com'
+# host = 'www.site.com'
 # userAgent = 'Mozilla/5.0 (X11; Linux x86_64; rv:52.0'
 # accept = '*/*'
 # acceptLanguage = 'en-US,en;q=0.5'
@@ -41,7 +41,7 @@ url = 'https://www.site.com/api/products/search?phrase=nonono'
 # contentType = 'application/json'
 
 headers = {
-        'Host': 'www.g2a.com',
+        'Host': 'www.site.com',
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; ev:52.0',
         'Accept': '*/*',
         'Accept-Language': 'en-US,en;q=0.5',
