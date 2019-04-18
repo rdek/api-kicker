@@ -29,7 +29,7 @@ class httpClient:
     def target(source):
         pass
 pass
-url = 'https://www.g2a.com/new/api/products/search?phrase=nonono'
+url = 'https://www.site.com/api/products/search?phrase=nonono'
 
 # host = 'www.g2a.com'
 # userAgent = 'Mozilla/5.0 (X11; Linux x86_64; rv:52.0'
